@@ -14,7 +14,6 @@ import {
 import classNames from 'classnames';
 
 import SidebarLink from './components/SidebarLink/SidebarLinkContainer';
-import Dot from './components/Dot';
 
 const structure = [
   { id: 0, label: "個人資料", link: "/app/profile", icon: <HomeIcon /> },
