@@ -44,9 +44,7 @@ export default function LessSalt() {
         <Button size="small" color="primary" href="https://www.healthittaipei.com.tw/index.aspx">
             Know more
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

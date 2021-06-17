@@ -44,9 +44,7 @@ export default function JonnyBro() {
         <Button size="small" color="primary" href="https://www.johnnybro.com.tw/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

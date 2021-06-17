@@ -44,9 +44,7 @@ export default function OneDayHappy() {
         <Button size="small" color="primary" href="https://deliexpress.oddle.me/zh_TW/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

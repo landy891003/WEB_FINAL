@@ -44,9 +44,7 @@ export default function NjuTurn() {
         <Button size="small" color="primary" href="https://njuturn.tw/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

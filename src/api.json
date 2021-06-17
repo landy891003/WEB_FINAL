@@ -2,18 +2,13 @@
   "posts": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "email": "cjisshit@123.com",
+      "password": "1234"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "email": "123",
+      "password": "123",
+      "id": 2
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

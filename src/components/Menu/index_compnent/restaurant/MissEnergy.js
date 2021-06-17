@@ -44,9 +44,7 @@ export default function MissEnergy() {
         <Button size="small" color="primary" href="https://www.facebook.com/missenergy23253878/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

@@ -91,11 +91,6 @@ export default function Header(props) {
           disableAutoFocusItem
         >
           <div className={classes.profileMenuUser}>
-            {/*<Typography variant="h4" weight="medium">
-                      
-            </Typography>*/}
-          </div>
-          <div className={classes.profileMenuUser}>
             <Typography
               className={classes.profileMenuLink}
               color="primary"

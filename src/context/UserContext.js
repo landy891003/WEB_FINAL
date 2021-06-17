@@ -1,5 +1,5 @@
 import React from "react";
-import axios from "axios";
+import app from "../firebase";
 var UserStateContext = React.createContext();
 var UserDispatchContext = React.createContext();
 
@@ -45,59 +45,24 @@ function useUserDispatch() {
   return context;
 }
 
-export { UserProvider, useUserState, useUserDispatch, loginUser, signOut,SignupUser };
+export { UserProvider, useUserState, useUserDispatch, loginUser, signOut };
 
 // ###########################################################
 
-function loginUser(dispatch, login, password, history, setIsLoading, setError) {
+function loginUser(dispatch, history, setIsLoading, setError) {
   setError(false);
   setIsLoading(true);
-  if (!!login && !!password) {
-    setTimeout(() => {
+  setTimeout(() => {
       localStorage.setItem('id_token', 1)
       setError(null)
       setIsLoading(false)
       dispatch({ type: 'LOGIN_SUCCESS' })    
       history.push('/app/profile')
     }, 2000);
-  } else {
-    dispatch({ type: "LOGIN_FAILURE" });
-    setError(true);
-    setIsLoading(false);
-  }
 }
 
 function signOut(dispatch, history) {
   localStorage.removeItem("id_token");
   dispatch({ type: "SIGN_OUT_SUCCESS" });
   history.push("/mainpage");
-}
-
-async function SignupUser(dispatch, login, password, history, setIsLoading, setError) {
-  setError(false);
-  setIsLoading(true);
-  
-  if (!!login && !!password) {
-    setTimeout(() => {
-      localStorage.setItem('id_token', 1)
-      setError(null)
-      setIsLoading(false)
-      axios.post('http://localhost:8000/posts',{
-      email:login,
-      password:password
-      })
-      .then(function(response){
-        console.log(response);
-      })
-      .catch((error)=>{
-        console.error(error);
-      })
-      dispatch({ type: 'LOGIN_SUCCESS' })    
-      history.push('/app/profile')
-      }, 2000);
-  } else {
-    dispatch({ type: "LOGIN_FAILURE" });
-    setError(true);
-    setIsLoading(false);
-  }
 }

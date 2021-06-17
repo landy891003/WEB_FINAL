@@ -12,7 +12,7 @@ export default makeStyles(theme => ({
     left: 0,
   },
   logotypeContainer: {
-    backgroundColor:theme.palette.primary.light,
+    backgroundImage: 'url(https://img4.goodfon.com/wallpaper/nbig/7/60/frukty-ovoshchi-assorti-fon.jpg)',
     width: "60%",
     height: "100%",
     display: "flex",
@@ -31,8 +31,8 @@ export default makeStyles(theme => ({
     marginBottom: theme.spacing(4),
   },
   logotypeText: {
-    color: "white",
-    fontWeight: 500,
+    color: "#f50057",
+    fontWeight: 700,
     fontSize: 84,
     [theme.breakpoints.down("md")]: {
       fontSize: 48,

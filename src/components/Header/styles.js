@@ -22,6 +22,7 @@ export default makeStyles(theme => ({
     }),
   },
   toolbar: {
+    backgroundColor: theme.palette.primary.main,
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
   },

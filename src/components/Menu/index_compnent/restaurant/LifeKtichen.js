@@ -44,9 +44,7 @@ export default function LifeKitchen() {
         <Button size="small" color="primary" href="https://lifekitchen.oddle.me/zh_TW/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

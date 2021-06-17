@@ -14,7 +14,6 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 import classNames from "classnames";
 
 import { Typography } from "../Wrappers";
-import UserAvatar from "../UserAvatar";
 
 const Header = ({ classes, isSidebarOpened, toggleSidebar, ...props }) => (
   <AppBar position="fixed" className={classes.appBar}>
@@ -41,7 +40,7 @@ const Header = ({ classes, isSidebarOpened, toggleSidebar, ...props }) => (
           />
         )}
       </IconButton>
-      <Typography variant="h6" weight="medium" className={classes.logotype}>React Material Admin</Typography>
+      <Typography variant="h6" weight="medium" className={classes.logotype}>健康餐盒推薦</Typography>
       <div className={classes.grow} />
       <Menu
         id="profile-menu"
@@ -53,17 +52,12 @@ const Header = ({ classes, isSidebarOpened, toggleSidebar, ...props }) => (
         disableAutoFocusItem
       >
         <div className={classes.profileMenuUser}>
-          <Typography variant="h4" weight="medium">
-            John Smith
-          </Typography>
-        </div>
-        <div className={classes.profileMenuUser}>
           <Typography
             className={classes.profileMenuLink}
             color="primary"
             onClick={props.signOut}
           >
-            Sign Out
+            登出
           </Typography>
         </div>
       </Menu>
@@ -159,7 +153,6 @@ const styles = theme => ({
   },
   headerMenuItem: {
     "&:hover, &:focus": {
-      backgroundColor: theme.palette.primary.main,
       color: "white"
     }
   },

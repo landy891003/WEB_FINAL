@@ -44,9 +44,7 @@ export default function GetBlessing() {
         <Button size="small" color="primary" href="https://www.facebook.com/vegshifu/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

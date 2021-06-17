@@ -44,9 +44,7 @@ export default function GetPower() {
         <Button size="small" color="primary" href="https://www.facebook.com/Getpower000/">
             Know more...
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );

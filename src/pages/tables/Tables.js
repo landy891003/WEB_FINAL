@@ -2,10 +2,10 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import MUIDataTable from "mui-datatables";
-import DemoForm from "./emailform";
 // components
 import PageTitle from "../../components/PageTitle";
 import Widget from "../../components/Widget";
+import ContactUs from "./emailform";
 
 // data
 
@@ -23,7 +23,7 @@ export default function Tables() {
   const classes = useStyles();
   return (
     <>
-      <PageTitle title="喜歡的餐廳" />
+      <PageTitle title="所有餐廳一欄" />
       <Grid container spacing={4}>
         <Grid item xs={12}>
           <MUIDataTable
@@ -39,8 +39,8 @@ export default function Tables() {
           />
         </Grid>
         <Grid item xs={12}>
-          <Widget title="和我們介紹更多餐廳"  disableWidgetMenu upperTitle noBodyPadding bodyClass={classes.tableOverflow}>
-            <DemoForm/><br/>
+          <Widget title="和我們介紹更多餐廳吧❤"  disableWidgetMenu upperTitle noBodyPadding bodyClass={classes.tableOverflow}>
+            <ContactUs/><br/>
           </Widget>
         </Grid>
       </Grid>

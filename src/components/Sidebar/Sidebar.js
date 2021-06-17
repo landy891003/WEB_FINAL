@@ -31,7 +31,7 @@ const structure = [
     link: "/app/restaurant",
     icon: <TypographyIcon />,
   },
-  { id: 2, label: "喜歡的餐廳", 
+  { id: 2, label: "所有餐廳一欄", 
     link: "/app/likes", 
     icon: <TableIcon /> },
   {

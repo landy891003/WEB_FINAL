@@ -44,9 +44,7 @@ export default function DrSalt() {
         <Button size="small" color="primary" href="https://www.drsalt.com.tw/">
             Know more
         </Button>
-        <Button size="small" color="primary">
-            Like
-        </Button>
+        
         </CardActions>
     </Card>
   );
