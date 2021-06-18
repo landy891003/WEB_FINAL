@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withFormik, Form, Field } from "formik";
-
 const form_id = "form_id";
 class MaintenanceForm extends Component {
   editOnClick = event => {
@@ -10,7 +9,7 @@ class MaintenanceForm extends Component {
       edit: data
     });
   };
-
+  
   cancelOnClick = event => {
     event.preventDefault();
     this.props.resetForm();
@@ -41,6 +40,7 @@ class MaintenanceForm extends Component {
               </button>
             </React.Fragment>
           ) : (
+            
             <button
               className="btn btn-primary btn-sm"
               onClick={this.editOnClick}
@@ -142,7 +142,7 @@ class MaintenanceForm extends Component {
       </React.Fragment>
     );
   };
-
+  
   render() {
     return (
       <React.Fragment>
@@ -151,15 +151,8 @@ class MaintenanceForm extends Component {
             ? this._renderFormInput()
             : this._renderFormView()}
         </Form>
+        <br/>
         {this._renderAction()}
-
-        {/*<h4>Current value</h4>
-        <div>
-          <pre>
-            <code>{JSON.stringify(this.props.fields, null, 2)}</code>
-          </pre>
-        </div>
-        */}
       </React.Fragment>
     );
   }

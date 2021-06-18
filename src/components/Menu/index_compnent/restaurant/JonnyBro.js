@@ -34,7 +34,7 @@ export default function JonnyBro() {
         />
         <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="h5" component="h2">
-            Jonny Bro
+            Johnny Bro 
             </Typography>
             <Typography>
             餐點皆由專業營養師團隊及餐飲顧問精心設計而成，完整營養標示及客製化選項，在高纖低脂低GI高蛋白的準則下，規劃美味餐點...

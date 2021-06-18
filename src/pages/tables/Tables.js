@@ -1,17 +1,13 @@
-import React from "react";
+import React,{useEffect,useState}from "react";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
-import MUIDataTable from "mui-datatables";
 // components
 import PageTitle from "../../components/PageTitle";
 import Widget from "../../components/Widget";
 import ContactUs from "./emailform";
+import axios from "axios"
+import { DataGrid } from "@material-ui/data-grid";
 
-// data
-
-const datatableData = [
-  ["Joe James", "Example Inc.", "Yonkers", "NY"],
-];
 
 const useStyles = makeStyles(theme => ({
   tableOverflow: {
@@ -21,22 +17,40 @@ const useStyles = makeStyles(theme => ({
 
 export default function Tables() {
   const classes = useStyles();
+  const [product,setProduct] = useState([])
+
+  const columns=[
+    {field:'name',headerName:'餐廳名稱' ,width: 300},
+    {field:'location',headerName:'地址',width: 300},
+    {field:'phone',headerName:'電話',width: 300}
+  ]
+
+
+    useEffect(() => {
+      axios.get("http://localhost/api.php")
+      .then(function (response){
+        setProduct(response.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    })
   return (
     <>
       <PageTitle title="所有餐廳一欄" />
       <Grid container spacing={4}>
         <Grid item xs={12}>
-          <MUIDataTable
-            title="餐廳項目"
-            data={datatableData}
-            columns={["餐廳名稱", "地址", "電話"]}
-            options={{
-              filterType: "checkbox",
-              download:false,
-              print:false,
-              viewColumns:false
-            }}
-          />
+        <Widget disableWidgetMenu>
+        <div style={{ width:"auto", height: '600px' }}>
+          <DataGrid
+            rows={product}
+            columns={columns}
+            checkboxSelection
+            pageSize="10"	          
+          >
+          </DataGrid>
+          </div>
+          </Widget>
         </Grid>
         <Grid item xs={12}>
           <Widget title="和我們介紹更多餐廳吧❤"  disableWidgetMenu upperTitle noBodyPadding bodyClass={classes.tableOverflow}>

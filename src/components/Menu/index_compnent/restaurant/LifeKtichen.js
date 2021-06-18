@@ -34,7 +34,7 @@ export default function LifeKitchen() {
         />
         <CardContent className={classes.cardContent}>
             <Typography gutterBottom variant="h5" component="h2">
-            生活倉儲
+            生活倉廚
             </Typography>
             <Typography>
             提供全橄欖油料理，並強調純手工修清肉品，與低溫配送原生雞蛋，希望每位顧客都能顧到健康又能吃飽的雙重享受...

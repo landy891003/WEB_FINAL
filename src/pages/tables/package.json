@@ -2,5 +2,9 @@
   "name": "Tables",
   "version": "0.0.0",
   "main": "Tables.js",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5"
+  }
 }

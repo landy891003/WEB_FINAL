@@ -17,6 +17,8 @@ import logo from "./logo.svg";
 import { useUserDispatch, loginUser} from "../../context/UserContext";
 import firebase from "firebase/app";
 import "firebase/auth";
+import classnames from "classnames";
+import google from "../../images/google.svg";
 
 function Login(props) {
   var classes = useStyles();
@@ -61,31 +63,31 @@ function Login(props) {
                   <CircularProgress size={26} />
                 ) : (
                   <Button
-                    onClick={() =>
-                      {
-                        const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-                        firebase.auth().signInWithPopup(googleAuthProvider)
-                        .then(()=>{
-                          loginUser(
-                          userDispatch,
-                          props.history,
-                          setIsLoading,
-                          setError,
-                          )
+                  size="large"
+                  className={classnames(
+                    classes.googleButton,
+                    classes.googleButtonCreating,
+                  )}
+                  onClick={() =>
+                    {
+                      const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+                      firebase.auth().signInWithPopup(googleAuthProvider)
+                      .then(()=>{
+                        loginUser(
+                        userDispatch,
+                        props.history,
+                        setIsLoading,
+                        setError,
+                        )
+                      })
+                      .catch((error)=>{
+                        console.log(error.message)
                         })
-                        .catch((error)=>{
-                          console.log(error.message)
-                          })
-                      }
                     }
-                    size="large"
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    className={classes.createAccountButton}
-                  >
-                    Create your account
-                  </Button>
+                  }>
+                  <img src={google} alt="google" className={classes.googleIcon} />
+                  &nbsp;Sign in with Google
+                </Button>
                 )}
               </div>
           </React.Fragment>

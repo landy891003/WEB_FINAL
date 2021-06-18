@@ -1,4 +1,4 @@
-import React ,{ useState } from "react";
+import React ,{ useState} from "react";
 import {
   Grid,
 } from "@material-ui/core";
@@ -6,21 +6,22 @@ import {
 import useStyles from "./styles";
 import UserForm from "./Form";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 // components
 import Widget from "../../components/Widget";
 import PageTitle from "../../components/PageTitle";
-
+import axios from "../tables/node_modules/axios";
 export default function Dashboard(props) {
   var classes = useStyles();
 
   // local
   const [fields, updateFields] = useState({
-    name: "Admin",
-    email: "admin@example.com",
+    name: "User",
+    email: "user@example.com",
     country: "Taiwan",
     intro:"Hello!"
-  });
+  }); 
+
+  axios.post("http://localhost:8000/profile",fields)
 
   return (
     <>
