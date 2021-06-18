@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // components
 import Widget from "../../components/Widget";
 import PageTitle from "../../components/PageTitle";
-import axios from "../tables/node_modules/axios";
+import axios from "";
 export default function Dashboard(props) {
   var classes = useStyles();
 
