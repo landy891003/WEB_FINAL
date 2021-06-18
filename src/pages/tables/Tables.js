@@ -20,9 +20,9 @@ export default function Tables() {
   const [product,setProduct] = useState([])
 
   const columns=[
-    {field:'name',headerName:'餐廳名稱' ,width: 300},
-    {field:'location',headerName:'地址',width: 300},
-    {field:'phone',headerName:'電話',width: 300}
+    {field:'name',headerName:'餐廳名稱' ,width: 400},
+    {field:'location',headerName:'地址',width: 500},
+    {field:'phone',headerName:'電話',width: 360}
   ]
 
 
@@ -41,7 +41,7 @@ export default function Tables() {
       <Grid container spacing={4}>
         <Grid item xs={12}>
         <Widget disableWidgetMenu>
-        <div style={{ width:"auto", height: '600px' }}>
+        <div style={{ width:"100%", height: '600px' }}>
           <DataGrid
             rows={product}
             columns={columns}
