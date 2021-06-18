@@ -9,15 +9,17 @@ import Login from "../pages/login";
 // context
 import { useUserState } from "../context/UserContext";
 import Homepage from "../Homepage";
+import {initGA,GApageView, GAmodalView} from "../index"
 
-import ReactGa from 'react-ga';
 export default function App() {
   // global
   var { isAuthenticated } = useUserState();
   useEffect(()=>{
-    ReactGa.initialize('UA-193495993-1')
-    ReactGa.pageview(window.location.pathname+window.location.search)
+    initGA();
+    GAmodalView("Request Demo");
+    GApageView("landing");
   },[])
+
   return (
     <HashRouter>
       <Switch>

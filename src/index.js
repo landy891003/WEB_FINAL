@@ -8,10 +8,19 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { LayoutProvider } from "./context/LayoutContext";
 import { UserProvider } from "./context/UserContext";
-
+import ReactGa from 'react-ga';
 import { Helmet } from 'react-helmet'
 
-
+export const initGA = () => {       
+  ReactGa.initialize('UA-193495993-1')
+  ReactGa.pageview(window.location.pathname+window.location.search);
+}
+export const GApageView = (page) => {   
+  ReactGa.pageview(page);   
+}
+export const GAmodalView = (modal) => {
+  ReactGa.modalview(modal);
+};
 ReactDOM.render(
   <LayoutProvider>
     <UserProvider>
