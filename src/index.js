@@ -14,6 +14,7 @@ import { Helmet } from 'react-helmet'
 export const initGA = () => {       
   ReactGa.initialize('UA-193495993-1')
   ReactGa.pageview(window.location.pathname+window.location.search);
+  console.log(window.location.pathname + window.location.search);
 }
 export const GApageView = (page) => {   
   ReactGa.pageview(page);   
