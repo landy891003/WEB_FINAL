@@ -12,7 +12,7 @@ import { DataGrid } from "@material-ui/data-grid";
 const useStyles = makeStyles(theme => ({
   tableOverflow: {
     overflow: 'auto'
-  }
+  } 
 }))
 
 export default function Tables() {
@@ -31,10 +31,7 @@ export default function Tables() {
       .then(function (response){
         setProduct(response.data)
       })
-      .catch(function (error) {
-        console.log(error);
-      });
-    })
+    },[])
   return (
     <>
       <PageTitle title="所有餐廳一欄" />
