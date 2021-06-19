@@ -9,7 +9,7 @@ import axios from "axios"
 import { DataGrid } from "@material-ui/data-grid";
 
 const cors ='https://cors-anywhere.herokuapp.com/';
-const url ='https://ec2-34-204-76-156.compute-1.amazonaws.com/';
+const url ='https://ec2-34-204-76-156.compute-1.amazonaws.com/api.php';
 
 const useStyles = makeStyles(theme => ({
   tableOverflow: {
