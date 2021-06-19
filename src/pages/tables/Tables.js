@@ -8,7 +8,8 @@ import ContactUs from "./emailform";
 import axios from "axios"
 import { DataGrid } from "@material-ui/data-grid";
 
-
+const cors ='https://cors-anywhere.herokuapp.com/';
+const url ='http://localhost/api.php';
 const useStyles = makeStyles(theme => ({
   tableOverflow: {
     overflow: 'auto'
@@ -27,7 +28,7 @@ export default function Tables() {
 
 
     useEffect(() => {
-      axios.get("http://localhost/api.php")
+      axios.get(`${cors}${url}`)
       .then(function (response){
         setProduct(response.data)
       })
