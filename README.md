@@ -4,3 +4,4 @@
 -目前使用CORSANYWHERE解決
 
 顯示網址:
+https://webfinalproj.herokuapp.com/#/mainpage
